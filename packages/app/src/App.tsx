@@ -37,6 +37,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+import { PfeTestPluginPage } from '@internal/backstage-plugin-pfe-test-plugin';
 
 const app = createApp({
   apis,
@@ -100,6 +101,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/pfe-test-plugin" element={<PfeTestPluginPage />} />
   </FlatRoutes>
 );
 
